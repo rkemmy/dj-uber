@@ -11,11 +11,9 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-<<<<<<< HEAD
 import dj_database_url
 from decouple import config
-=======
->>>>>>> f143df790f8dda548ddd5db501226561c672b338
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,19 +23,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
+
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
-=======
-SECRET_KEY = 'mt*(p$dt0%@yf-%#dx@p)tprz6ei$@qubr^pz%v=kuc_m!=lt2'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
->>>>>>> f143df790f8dda548ddd5db501226561c672b338
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -69,11 +64,8 @@ ROOT_URLCONF = 'Cuber.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
+
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
-=======
-        'DIRS': [],
->>>>>>> f143df790f8dda548ddd5db501226561c672b338
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -98,11 +90,10 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-<<<<<<< HEAD
+
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
-=======
->>>>>>> f143df790f8dda548ddd5db501226561c672b338
+
 
 
 # Password validation
@@ -143,7 +134,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-<<<<<<< HEAD
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
@@ -152,6 +143,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-=======
->>>>>>> f143df790f8dda548ddd5db501226561c672b338
+
 
